@@ -20,7 +20,7 @@ def test_verify_login_logout(driver):
     loginlogout_page.click_login_button()
     loginlogout_page.click_avatar_icon_present_user_dashboard()
 
-#assertion for successful login
+#1. assertion for successful login
     actual_username = loginlogout_page.get_logged_in_username()
     expected_username = "Pogotest38"
     assert actual_username == expected_username, (
@@ -28,7 +28,7 @@ def test_verify_login_logout(driver):
     )
     print(f"Actual Username:'{actual_username}' matched successfully with Expected Username:'{expected_username}'. Test Passed!")
 
-#assertion for successful Logout
+#2. assertion for successful Logout
     loginlogout_page.click_on_signout_button()
 
     actual_signout_result = loginlogout_page.get_signout_message()
@@ -40,4 +40,4 @@ def test_verify_login_logout(driver):
 
     assert loginlogout_page.is_signin_button_present(), "Sign In button is not visible after sign out!"
     print("Sign in button is displayed after successful logout")
-    time.sleep(8)
+    time.sleep(10)
