@@ -40,4 +40,4 @@ def test_verify_login_logout(driver):
 
     assert loginlogout_page.is_signin_button_present(), "Sign In button is not visible after sign out!"
     print("Sign in button is displayed after successful logout")
-    time.sleep(10)
+    time.sleep(8)
