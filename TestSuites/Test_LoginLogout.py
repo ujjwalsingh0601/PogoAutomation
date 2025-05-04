@@ -1,6 +1,7 @@
 import time
 from ..PageObjects.LoginLogoutPage import LoginLogoutPage
 from ..Fixtures.driver_fixture import driver
+from ..TestData.Credentials import Username_Email, Password , PogoLandingPage
 
 # @pytest.fixture()
 # def driver():
@@ -12,11 +13,11 @@ from ..Fixtures.driver_fixture import driver
 def test_verify_login_logout(driver):
     loginlogout_page = LoginLogoutPage(driver)
 
-    loginlogout_page.navigate_to_pogo_page("https://www.pogo.com")
+    loginlogout_page.navigate_to_pogo_page(PogoLandingPage)
     loginlogout_page.click_sign_in_button()
-    loginlogout_page.enter_username("neproks@gmail.com")
+    loginlogout_page.enter_username(Username_Email)
     loginlogout_page.click_next_button()
-    loginlogout_page.enter_password("Pogotest@38")
+    loginlogout_page.enter_password(Password)
     loginlogout_page.click_login_button()
     loginlogout_page.click_avatar_icon_present_user_dashboard()
 
