@@ -45,7 +45,7 @@ class SearchPage:
             WebDriverWait(self.driver,5).until(
                 EC.visibility_of_element_located((self.PlayNowButton))
             )
-            print("play now button is present")
+            print("Searching for play now button.......")
             return True
         except TimeoutException:
             return False

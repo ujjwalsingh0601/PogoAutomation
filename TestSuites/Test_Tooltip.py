@@ -22,6 +22,7 @@ def test_verify_tooltip_message(driver):
     #1. verify tool tip message of pogimeter menu icon
     actual_pogimeter_tooltip_message = tooltip_page.hover_on_menuicon_and_capture_tooltip(
         tooltip_page.PogiMeter_MenuIncon, tooltip_page.Pogimeter_Tooltip)
+
     expected_pogimeter_tooltip_message = "Track how many you need to earn to unlock the next reward. Click the meter to see the rewards."
     assert actual_pogimeter_tooltip_message == expected_pogimeter_tooltip_message, (
         f"Expected tooltip message: '{expected_pogimeter_tooltip_message}', but got :'{actual_pogimeter_tooltip_message}'")
